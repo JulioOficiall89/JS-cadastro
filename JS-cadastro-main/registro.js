@@ -6,7 +6,6 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
-
 let nome, email, idade, telefone, senha;
 
 function cadastrarUsuario() {
@@ -99,7 +98,7 @@ function cadastrarUsuario() {
                 console.error('Erro ao criar usuário:', err);
               } else {
                 console.log('Usuário criado com sucesso!');
-                menu(); // <--- Chama a função menu() novamente
+                menu(); 
               }
             });
           });
@@ -123,12 +122,12 @@ function verificarLogin() {
             const [nome, emailUsuario, telefone, idade, senhaUsuario] = usuario.split(';');
             if (email === emailUsuario && senha === senhaUsuario) {
               console.log('Login efetuado com sucesso!');
-              menu(); // <--- Chama a função menu() novamente
+              menu(); 
               return;
             }
           }
           console.log('Email ou senha incorretos!');
-          menu(); // <--- Chama a função menu() novamente
+          menu(); 
         }
       });
     });
@@ -152,7 +151,7 @@ function cadastrarUsuario() {
                   console.error('Erro ao criar usuário:', err);
                 } else {
                   console.log('Usuário criado com sucesso!');
-                  menu(); // <--- Chama a função menu() novamente
+                  menu();
                 }
               });
             });
@@ -176,12 +175,12 @@ function cadastrarUsuario() {
               const [nome, emailUsuario, telefone, idade, senhaUsuario] = usuario.split(';');
               if (email === emailUsuario && senha === senhaUsuario) {
                 console.log('Login efetuado com sucesso!');
-                menu(); // <--- Chama a função menu() novamente
+                menu(); 
                 return;
               }
             }
             console.log('Email ou senha incorretos!');
-            menu(); // <--- Chama a função menu() novamente
+            menu();
           }
         });
       });
